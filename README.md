@@ -13,7 +13,7 @@ $ go get github.com/chrfrasco/git-open
 Assuming `$GOPATH/bin` is on your path:
 
 ```sh
-$ git-open # opens default by origin
+$ git-open # opens origin by default
 ```
 
 ## Create a git alias
