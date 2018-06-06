@@ -51,7 +51,7 @@ func Parse() ([]Remote, error) {
 }
 
 func parse(file *os.File) ([]Remote, error) {
-	remotes := *new([]Remote)
+	remotes := []Remote{}
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		line := scanner.Text()
