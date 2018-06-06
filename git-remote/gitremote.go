@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"errors"
 	"fmt"
+	"io"
 	"os"
 	"regexp"
 )
@@ -50,7 +51,7 @@ func Parse() ([]Remote, error) {
 	return parse(file)
 }
 
-func parse(file *os.File) ([]Remote, error) {
+func parse(file io.Reader) ([]Remote, error) {
 	remotes := []Remote{}
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
